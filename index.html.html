@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aida Rahmati — Product Manager</title>
+<meta name="description" content="Aida Rahmati — Product Manager building digital products that create better user experiences and measurable business impact.">
+<style>
+:root{
+  --bg:#f7f5ef; --ink:#171717; --muted:#6e6b63; --card:#fffdf8;
+  --line:#dedbd2; --accent:#dfff55; --blue:#c9e8ff; --peach:#ffd6bd;
+  --radius:28px; --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;position:relative;z-index:5}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:20px}
+.navlinks{display:flex;gap:28px;font-size:14px;color:#555}
+.navlinks a{transition:.2s}.navlinks a:hover{color:#000;transform:translateY(-1px)}
+.hero{min-height:calc(100vh - 80px);display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:70px;padding:70px 0 100px}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-weight:700;margin-bottom:22px}
+h1{font-size:clamp(58px,8vw,106px);line-height:.9;letter-spacing:-.075em;margin:0 0 30px;max-width:800px}
+.hero p{font-size:20px;line-height:1.55;max-width:620px;color:#4e4c47;margin:0 0 34px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;padding:15px 20px;border-radius:999px;font-weight:700;font-size:14px;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px #0002}
+.orbit{position:relative;min-height:470px;display:grid;place-items:center}
+.blob{width:350px;height:350px;border-radius:48% 52% 61% 39% / 40% 43% 57% 60%;background:var(--accent);transform:rotate(-12deg);animation:float 5s ease-in-out infinite}
+.sticker{position:absolute;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:13px 16px;font-size:13px;font-weight:700;box-shadow:0 12px 35px #00000010}
+.s1{top:55px;right:15px;transform:rotate(6deg)}.s2{bottom:72px;left:5px;transform:rotate(-7deg);background:var(--blue)}.s3{top:210px;left:30px;transform:rotate(4deg);background:var(--peach)}
+
+
+.portrait{
+  position:absolute;
+  width:245px;
+  height:315px;
+  overflow:hidden;
+  border-radius:48% 52% 42% 58% / 34% 38% 62% 66%;
+  transform:rotate(5deg);
+  box-shadow:0 18px 45px #0002;
+  background:#eee;
+}
+.portrait img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+}
+
+@keyframes float{50%{transform:rotate(-8deg) translateY(-12px)}}
+.section{padding:110px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
+.kicker{font-size:13px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);font-weight:800}
+h2{font-size:clamp(42px,6vw,72px);letter-spacing:-.06em;line-height:.95;margin:10px 0 0}
+.intro{max-width:470px;color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.metric{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
+.metric:hover{transform:translateY(-5px);border-color:#aaa}
+.metric strong{font-size:50px;letter-spacing:-.06em}.metric span{color:var(--muted);font-size:14px}
+.timeline{display:grid;gap:18px}
+.role{display:grid;grid-template-columns:180px 1fr;gap:35px;padding:32px 0;border-top:1px solid var(--line)}
+.role:last-child{border-bottom:1px solid var(--line)}
+.date{font-size:13px;color:var(--muted);font-weight:700}
+.role h3{font-size:27px;letter-spacing:-.035em;margin:0 0 3px}.company{color:var(--muted);margin-bottom:22px}
+.role ul{margin:0;padding-left:20px;color:#4d4a44}.role li{margin:8px 0}
+.pills{display:flex;flex-wrap:wrap;gap:10px}
+.pill{padding:11px 15px;border:1px solid var(--line);background:var(--card);border-radius:999px;font-size:14px;transition:.2s}
+.pill:hover{background:var(--accent);transform:rotate(-2deg)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.about-copy{font-size:25px;line-height:1.45;letter-spacing:-.02em}
+.about-note{background:var(--blue);border-radius:var(--radius);padding:32px;transform:rotate(1.5deg)}
+.about-note h3{margin:0 0 10px;font-size:25px}.about-note p{margin:0;color:#3e4a53}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.edu-card{padding:26px;background:var(--card);border:1px solid var(--line);border-radius:22px}
+.edu-card h3{margin:0 0 6px;font-size:19px}.edu-card p{margin:0;color:var(--muted);font-size:14px}
+.cta{background:var(--ink);color:white;border-radius:36px;padding:70px;display:flex;justify-content:space-between;align-items:end;gap:40px}
+.cta h2{max-width:700px}.cta p{color:#bcbab4;max-width:520px;font-size:18px}
+.cta .btn{background:var(--accent);color:#111}
+footer{padding:35px 0 45px;display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+@media(max-width:800px){
+ .container{width:min(calc(100% - 28px),var(--max))}
+ .navlinks{gap:14px}.navlinks a:nth-child(-n+2){display:none}
+ .hero{grid-template-columns:1fr;padding:55px 0 75px;gap:20px}.orbit{min-height:330px}.blob{width:270px;height:270px}.portrait{width:190px;height:245px}
+ .metrics{grid-template-columns:1fr 1fr}.role{grid-template-columns:1fr;gap:8px}.about{grid-template-columns:1fr;gap:35px}.edu{grid-template-columns:1fr}
+ .cta{padding:38px 28px;display:block}.cta .btn{margin-top:18px}footer{display:block}footer span{display:block;margin-top:8px}
+}
+</style>
+</head>
+<body>
+<header class="container">
+<nav>
+  <a class="logo" href="#">Aida<span style="color:#777">.</span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#connect">Connect ↗</a></div>
+</nav>
+</header>
+
+<main>
+<section class="container hero">
+  <div>
+    <div class="eyebrow">Product Manager · Fintech · Digital Products</div>
+    <h1>Building products people actually want to use.</h1>
+    <p>I’m Aida Rahmati, a Product Manager turning user behavior and business needs into simple, scalable digital experiences — from onboarding and payments to core banking.</p>
+    <a class="btn" href="https://www.linkedin.com/in/aida-rahmati-spm/" target="_blank">Connect on LinkedIn ↗</a>
+  </div>
+  <div class="orbit" aria-label="Decorative portrait placeholder">
+    <div class="blob"></div><div class="portrait"><img src="aida-portrait.jpg" alt="Aida Rahmati"></div>
+    <div class="sticker s1">user × business</div>
+    <div class="sticker s2">data-informed</div>
+    <div class="sticker s3">fintech →</div>
+  </div>
+</section>
+
+<section class="container section" id="about">
+  <div class="section-head"><div><div class="kicker">01 / Impact</div><h2>Numbers worth<br>talking about.</h2></div><p class="intro">A few signals from products and launches I’ve worked on across financial services and e-commerce.</p></div>
+  <div class="metrics">
+    <div class="metric"><strong>25%</strong><span>Activation completion increase</span></div>
+    <div class="metric"><strong>23%</strong><span>Conversion increase</span></div>
+    <div class="metric"><strong>2M+</strong><span>Users served by KeyLead</span></div>
+    <div class="metric"><strong>9K</strong><span>Business users onboarded</span></div>
+  </div>
+</section>
+
+<section class="container section" id="experience">
+  <div class="section-head"><div><div class="kicker">02 / Experience</div><h2>What I’ve<br>been building.</h2></div><p class="intro">A product journey across fintech, banking capabilities and e-commerce experiences.</p></div>
+  <div class="timeline">
+    <article class="role">
+      <div class="date">2023 — Present</div>
+      <div><h3>Product Manager</h3><div class="company">Adanic Co.</div>
+      <ul><li>Redesigning end-to-end onboarding with automated contracts, digital signatures and eKYC.</li><li>Delivered role-based access control for enterprise financial operations.</li><li>Built a corporate wallet supporting prepaid and postpaid billing models.</li><li>Led KeyLead onboarding and rollout in a new bank, supporting adoption of approximately 9,000 business users.</li><li>Worked with engineering teams on banking APIs, third-party integrations and core banking capabilities including digital cheques, transfers and bulk payments.</li></ul></div>
+    </article>
+    <article class="role">
+      <div class="date">2021 — 2023</div>
+      <div><h3>Product Owner</h3><div class="company">Chapagha Co.</div>
+      <ul><li>Improved checkout and order flows using user behavior insights.</li><li>Improved file upload and order submission experiences.</li><li>Delivered wallet and reward features.</li><li>Managed backlog, sprint planning and delivery with the engineering team using Agile methods.</li></ul></div>
+    </article>
+  </div>
+</section>
+
+<section class="container section" id="skills">
+  <div class="section-head"><div><div class="kicker">03 / Toolkit</div><h2>How I<br>work.</h2></div><p class="intro">A practical mix of product thinking, user experience, data and collaboration with technical teams.</p></div>
+  <div class="pills">
+    <span class="pill">Product Management</span><span class="pill">Fintech</span><span class="pill">Digital Products</span><span class="pill">User Journey</span><span class="pill">Onboarding</span><span class="pill">Data-informed Decisions</span><span class="pill">Google Analytics</span><span class="pill">SQL</span><span class="pill">Jira</span><span class="pill">Figma</span><span class="pill">Confluence</span><span class="pill">Balsamiq</span><span class="pill">Yandex Metrica</span>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="about">
+    <div><div class="kicker">04 / About</div><p class="about-copy">I enjoy turning messy user behavior and business needs into simple, scalable product experiences. My work sits at the intersection of <strong>people, technology and measurable impact.</strong></p></div>
+    <div class="about-note"><h3>A little more context →</h3><p>My background started in Materials Engineering, then moved into Product Management through focused product and data learning. Today I work across financial services and digital products.</p></div>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-head"><div><div class="kicker">05 / Education</div><h2>Always<br>learning.</h2></div></div>
+  <div class="edu">
+    <div class="edu-card"><h3>B.Sc. Materials Engineering</h3><p>Iran University of Science and Technology, Tehran · 2014 — 2018</p></div>
+    <div class="edu-card"><h3>Product Management</h3><p>Tose'e Higher Education Institute · 2020</p></div>
+    <div class="edu-card"><h3>Technical Concepts and Techniques for Non-Technical Managers</h3><p>Bozhan School · 2022</p></div>
+    <div class="edu-card"><h3>SQL for Data Science</h3><p>Coursera · 2023</p></div>
+  </div>
+</section>
+
+<section class="container section" id="connect">
+  <div class="cta">
+    <div><div class="kicker" style="color:#aaa">06 / Let’s connect</div><h2>Interested in building better digital products?</h2><p>Let’s talk about product, technology, and opportunities to create meaningful user and business impact.</p></div>
+    <a class="btn" href="https://www.linkedin.com/in/aida-rahmati-spm/" target="_blank">Say hello ↗</a>
+  </div>
+</section>
+</main>
+
+<footer class="container"><span>© Aida Rahmati</span><span>Product · People · Impact</span></footer>
+</body>
+</html>
